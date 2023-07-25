@@ -2,6 +2,11 @@
 <html>
 <head>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: lightgrey;
+        }
+    </style>
 </head>
 <body class="bg-[#E7DECC]">
     <!-- Top navigation bar -->
@@ -14,37 +19,42 @@
     <!-- Main body -->
     <main class="p-6 max-w-4xl mx-auto mt-8">
         <!-- First row -->
-        <div class="flex justify-between items-center pb-4">
+        <div class="flex justify-center items-center pb-4">
             <h2 class="text-2xl font-bold">Stories Moderation</h2>
         </div>
 
         <!-- Second row -->
         <form class="space-y-4">
-            <div class="grid grid-cols-4 gap-4">
-                <div>
-                    <label>From Date</label>
-                    <input type="date" class="w-full border p-2 rounded-full">
-                    <label>To Date</label>
-                    <input type="date" class="w-full border p-2 rounded-full">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label>From Date</label>
+                        <input type="date" class="border p-2 rounded-full">
+                    </div>
+                    <div>
+                        <label>To Date</label>
+                        <input type="date" class="border p-2 rounded-full">
+                    </div>
                 </div>
 
-                <div>
-                    <label>App Language</label>
-                    <select class="w-full border p-2 rounded-full">
-                        <option>All</option>
-                        <option>English</option>
-                        <option>Hindi</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label>Country</label>
-                    <select class="w-full border p-2 rounded-full">
-                        <option>All</option>
-                        <option>India</option>
-                        <option>Brazil</option>
-                        <option>ROW</option>
-                    </select>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label>App Language</label>
+                        <select class="w-full border p-2 rounded-full">
+                            <option>All</option>
+                            <option>English</option>
+                            <option>Hindi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Country</label>
+                        <select class="w-full border p-2 rounded-full">
+                            <option>All</option>
+                            <option>India</option>
+                            <option>Brazil</option>
+                            <option>ROW</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div>
@@ -56,40 +66,41 @@
 
         <!-- Third row -->
         <div class="space-y-4">
-            <div class="grid grid-cols-3 gap-4">
-                <div>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Unmoderated</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Approved</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Rejected</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Hold</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">All</button>
-                </div>
-                <div>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Eminent</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">High Potential</button>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Organic</button>
-                </div>
-                <div>
-                    <!-- Please replace 'x' with the count of stories in the selected section -->
-                    <p>Count of stories in the selected section: x</p>
-                </div>
+            <h2 class="text-xl font-bold">Moderation Status Tabs</h2>
+            <div class="flex space-x-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Unmoderated</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Approved</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Rejected</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Hold</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">All</button>
+            </div>
+            <h2 class="text-xl font-bold">User Status Filter</h2>
+            <div class="flex space-x-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Eminent</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">High Potential</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Organic</button>
+            </div>
+            <div>
+                <!-- Please replace 'x' with the count of stories in the selected section -->
+                <p>Count of stories in the selected section: 20</p>
             </div>
         </div>
 
         <!-- Fourth row -->
         <div class="grid grid-cols-3 gap-4 mt-12">
             <div class="bg-white p-4 shadow rounded-lg relative">
-                <h2 class="text-6xl font-bold">User Details</h2>
+                <h2 class="text-3xl font-bold">User Details</h2>
+                <img src="index.html/image-placeholder.jpg" alt="Image Placeholder">
                 <ul>
-                    <li>Image</li>
-                    <li>Name</li>
-                    <li>Handle</li>
-                    <li>Koo app link</li>
+                    <li>Name: Sample User</li>
+                    <li>Handle: @sampleuser</li>
+                    <li>Koo app link: www.kooapp.com/sampleuser</li>
                 </ul>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Block</button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Hide</button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Blacklist</button>
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Approve Fake</button>
+                <h3 class="text-2xl font-bold">Action Buttons</h3>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full mt-2">Block</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full mt-2">Hide</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full mt-2">Blacklist</button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full mt-2">Approve Fake</button>
             </div>
 
             <div class="bg-white p-4 shadow rounded-lg relative">
